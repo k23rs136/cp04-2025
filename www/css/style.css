@@ -4,8 +4,10 @@
     }
 
     button {
-        color: blue;
-        font-family: Times;
+        color: white;
+        background-color: salmon;
+        font-family: roboto;
+        border: none;
         border-radius: 20px;
     }
 
@@ -55,8 +57,6 @@
     }
     
     #btnA {
-        background-color: yellow;
-        color: green;
         font-size: 20px;
         position:absolute; top:380px; left:5%; width:43%; height:60px; 
     }
@@ -67,12 +67,12 @@
     }
 
     #btnC {
-        font-size: 10px;
+        font-size: 20px;
         position:absolute; top:444px; left:5%; width:43%; height:60px; 
     }
 
     #btnD {
-        font-size: 10px;
+        font-size: 20px;
         position:absolute; top:444px; left:52%; width:43%; height:60px; 
     }
     
