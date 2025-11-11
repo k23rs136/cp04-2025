@@ -193,11 +193,17 @@
         startTime = new Date();
         period = 60* parseInt($("#minute").val()) + parseInt($("#second").val());
         remainingTime = 0;
+        $("#btnB").prop("disabled", false);
+        $("#btnA").prop("disabled", true);
+        $("#btnD").prop("disabled", true);  
     }
 
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
+        $("#btnA").prop("disabled", false);     
+        $("#btnB").prop("disabled", true);
+        $("#btnD").prop("disabled", false); 
         remainingTime = rest;
     }
 
@@ -208,12 +214,18 @@
         period = 60* parseInt($("#minute").val()) + parseInt($("#second").val());
         $("#time").html("経過時間：0");
         $("#remain").html("残り時間： " + period);
+        $("#btnA").prop("disabled", false); 
+        $("#btnB").prop("disabled", true);
+        $("#btnD").prop("disabled", true);
     }
 
     function btnDClick(e){
         active = true;
         startTime = new Date();
         period = remainingTime;
+        $("#btnA").prop("disabled", true); 
+        $("#btnB").prop("disabled", false);
+        $("#btnD").prop("disabled", true); 
     }
     
  
