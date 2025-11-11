@@ -160,6 +160,7 @@
     var rest = 0;
     var etime = 0;
     var remainingTime = 0;
+    var progress = 0;
 
     
     // ボタンの初期設定
@@ -201,6 +202,7 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active = false;
+        progress += etime;
         $("#btnA").prop("disabled", false);     
         $("#btnB").prop("disabled", true);
         $("#btnD").prop("disabled", false); 
@@ -223,6 +225,7 @@
         active = true;
         startTime = new Date();
         period = remainingTime;
+        etime = 0;
         $("#btnA").prop("disabled", true); 
         $("#btnB").prop("disabled", false);
         $("#btnD").prop("disabled", true); 
@@ -234,7 +237,7 @@
         if(active) {
             etime = parseInt((new Date() - startTime)/1000);
             rest = period - etime;
-            $("#time").html("経過時間： " + etime);
+            $("#time").html("経過時間： " + (progress + etime));
             $("#remain").html("残り時間： " + rest);
             analog(rest); 
             if(rest <= 0) {
