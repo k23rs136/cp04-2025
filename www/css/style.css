@@ -3,9 +3,17 @@
         background-color: white;
     }
 
-    button {
+    button:disabled {
+        color: salmon;
+        background-color: white;
+        font-family: roboto;
+        border: 2px solid salmon;
+        border-radius: 20px;
+    }
+
+    button:enabled {
         color: white;
-        background-color: salmon;
+        background-color: salmon ;
         font-family: roboto;
         border: none;
         border-radius: 20px;
